@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: Api_Gateway
+
+  cloud:
+    gateway:
+      server:
+        webflux:
+          routes:
+          - id: DemoAPI
+            uri: lb://DEMO-API
+            predicates:
+              - Path=/demo
+          - id: TestApi
+            uri: lb://TEST-API
+            predicates:
+              - Path=/test
+          - id: Order
+            uri: lb://ORDERS-SERVICE
+            predicates:
+              - Path=/orders/**
+          - id: Product
+            uri: lb://PRODUCT-SERVICE
+            predicates:
+              - Path=/product/**
+              
+              
