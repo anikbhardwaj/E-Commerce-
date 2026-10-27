@@ -3,3 +3,9 @@
 .classpath
 .project
 target/
+
+# Local certificates and secrets
+01_UserService/certs/
+01_UserService/.env
+01_UserService/**/.env
+01_UserService/src/main/resources/application-local.properties

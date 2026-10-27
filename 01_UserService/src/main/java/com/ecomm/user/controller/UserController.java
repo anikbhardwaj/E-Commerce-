@@ -40,7 +40,7 @@ public class UserController {
 		UserDto dto = uservice.login(request);
 		return ResponseEntity.ok(new ApiResponse<>("Login successful!!",dto,HttpStatus.OK));
 	}
-	@GetMapping("/get/{uid}")
+	@GetMapping("/get/{userId}")
 	public ResponseEntity<?>getbyid( @PathVariable Integer userId){
 		   UserDto udto=uservice.getByUserUserId(userId);
 		   return ResponseEntity.ok(udto);
