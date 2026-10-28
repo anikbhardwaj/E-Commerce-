@@ -86,7 +86,7 @@ RoleDto existingRole=rservice.getRoleByRoleName(request.getRoleName());
 		if(!alreadyExists.getPassword().equals(request.getPassword())) {
 			throw new AppException("Incorrect Password!",HttpStatus.BAD_REQUEST);
 		}
-		mservice.sendmail(request.getEmail(), "E-commerce"," "+ "your Account Login Successfully");
+		//mservice.sendmail(request.getEmail(), "E-commerce"," "+ "your Account Login Successfully");
         
 		UserDto dto = mapper.map(alreadyExists, UserDto.class);
 		ProfileDto pdto=pservice.getProfileByuserid(dto.getUserId());
