@@ -66,8 +66,8 @@ RoleDto existingRole=rservice.getRoleByRoleName(request.getRoleName());
 		p.setUser(u);
 		p=pservice.addProfile(p);
 		
-		mservice.sendmail(request.getEmail(), "Welcome to E-Commerce",
-				request.getFirstName()+" " + "your account Created Sucessfully");
+		//mservice.sendmail(request.getEmail(), "Welcome to E-Commerce",
+				//request.getFirstName()+" " + "your account Created Sucessfully");
 		
 		UserDto dto = mapper.map(u, UserDto.class);
 		ProfileDto pdto=mapper.map(p, ProfileDto.class);
